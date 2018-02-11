@@ -92,6 +92,10 @@ def genDS2():
     DS2_neg = DS2_neg[1:,:]
     DS2_neg = np.concatenate((DS2_neg,neg),axis=1)
     
+    
+    
+    
+    
     #Split the dataset into test and training, using a 30-70 split
     DS2_test = np.concatenate((DS2_pos[:600,:], DS2_neg[:600,:])) 
     DS2_training = np.concatenate((DS2_pos[600:,:], DS2_neg[600:,:]))

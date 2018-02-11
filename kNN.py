@@ -73,7 +73,7 @@ def bestK(X_train, Y_train, X_test, Y_test):
 
 #Select k for k-NN here:
 
-k = 15
+k = 17
 
 #Load data     
 X_train, Y_train = loadData('DS2_training.csv')
@@ -116,6 +116,7 @@ print "Accuracy: " + str(accuracy)
 print "Precision: " + str(precision)
 print "Recall: " + str(recall)
 print "f1_score: " + str(f1_score)
+
 
 
 
