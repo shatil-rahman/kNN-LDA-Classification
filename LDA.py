@@ -123,13 +123,13 @@ def predictNsamples(W0,W1,X):
        
        
 
-X_train, Y_train = loadData('DS1_training.csv')
-X_test,Y_test = loadData('DS1_test.csv')
+X_train, Y_train = loadData('DS2_training.csv')
+X_test,Y_test = loadData('DS2_test.csv')
 W0,W1 = LDA(X_train,Y_train)
 Y_predicted = predictNsamples(W0,W1,X_test)
 
 accuracy, precision, recall, f1_score = perf.evaluate(Y_test, Y_predicted)
-
+print "Performance of Probabilistic LDA:"
 print "Accuracy: " + str(accuracy)
 print "Precision: " + str(precision)
 print "Recall: " + str(recall)
@@ -147,9 +147,9 @@ print "f1_score: " + str(f1_score)
 '''
 #Just testing with 2 features
 m0 = [1.3, 1.3]
-m1 = [3.30, 2.0]
+m1 = [2.30, 4.0]
 
-cov = np.array([[0.5, 1.20], [1.20, 5.6]])
+cov = np.array([[0.5, -1.3], [-1.3, 5.6]])
 
  
 DS1_pos = np.random.multivariate_normal(m0,cov,size=(2000))

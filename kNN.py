@@ -73,11 +73,11 @@ def bestK(X_train, Y_train, X_test, Y_test):
 
 #Select k for k-NN here:
 
-k = 40
+k = 15
 
 #Load data     
-X_train, Y_train = loadData('DS1_training.csv')
-X_test, Y_test = loadData('DS1_test.csv')
+X_train, Y_train = loadData('DS2_training.csv')
+X_test, Y_test = loadData('DS2_test.csv')
 
 '''
 #Just testing with 2 features
@@ -111,6 +111,7 @@ for i in range(0, Y_test.shape[0]):
 
 accuracy, precision, recall, f1_score = perf.evaluate(Y_test, Y_predicted)
 
+print "Performance of kNN with k=" + str(k) + ":"
 print "Accuracy: " + str(accuracy)
 print "Precision: " + str(precision)
 print "Recall: " + str(recall)
